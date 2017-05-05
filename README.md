@@ -14,7 +14,7 @@ npm install --save geobound-object
 This package provides a constructor only. This constructor has to be called with the new statement. If invalid properties are passed, the constructor throws an error.
 
 ### Input parameter
-THere are many different types of allowed inputs
+There are many different types of allowed inputs
 
 #### Edge - Array
 ```js

@@ -34,10 +34,16 @@
             }
         }
 
-        return this.north && this.east && this.south && this.west;
+        return (this.north || this.north === 0) &&
+            (this.east || this.east === 0) &&
+            (this.south || this.south === 0) &&
+            (this.west || this.west === 0);
     }
 
     module.exports = function(bounds) {
+        if (arguments.length === 4) {
+            bounds = [bounds, arguments[1], arguments[2], arguments[3]];
+        }
         if (!extractBounds.call(this, bounds)) {
             throw new Error('invalid data passed to bound constructor');
         }
@@ -57,13 +63,13 @@
             return [this.getSouth(), this.getWest()];
         };
         this.getNorthEast = function() {
-            return [this.getSouth(), this.getWest()];
+            return [this.getNorth(), this.getEast()];
         };
         this.getNorthWest = function() {
-            return [this.getSouth(), this.getWest()];
+            return [this.getNorth(), this.getWest()];
         };
         this.getSouthEast = function() {
-            return [this.getSouth(), this.getWest()];
+            return [this.getSouth(), this.getEast()];
         };
         this.getCenter = function() {
             return [(this.getSouth() + this.getNorth()) / 2,

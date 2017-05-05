@@ -26,6 +26,9 @@
 
     let invalid;
 
+    // allow north, east, south, west
+    expect(new Bound(1, 2, 3, 4), [1, 2, 3, 4]);
+
     // allow [north, east, south, west]
     expect(new Bound([1, 2, 3, 4]), [1, 2, 3, 4]);
 
