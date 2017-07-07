@@ -60,5 +60,9 @@ The returned bound object has several getter methods.
 - getSouthEast - [Number, Number], [south, east]
 - getCenter  - [Number, Number], [lat, lng] of center of the bounds
 
+## Versions
+v0.1.2 fixed: throw controlled error if no bound data is passed to constructor
+v0.1.1 first stable version
+
 ## Contribute
 Feel free to add issues or pull requests. I'm glad for every kind of feedback!
