@@ -41,6 +41,9 @@
     }
 
     module.exports = function(bounds) {
+        if (!bounds) {
+            throw new Error('no data passed to bound constructor');
+        }
         if (arguments.length === 4) {
             bounds = [bounds, arguments[1], arguments[2], arguments[3]];
         }

@@ -1,6 +1,6 @@
 {
   "name": "geobound-object",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "convert different type of arrays to a unified bound object with getter methods",
   "main": "index.js",
   "scripts": {
